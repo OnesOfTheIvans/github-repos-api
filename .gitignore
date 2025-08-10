@@ -1,3 +1,4 @@
 .idea/
 github-api/.mvn/
 github-api.iml
+github-api/target/
