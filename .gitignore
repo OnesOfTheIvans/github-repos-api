@@ -2,3 +2,4 @@
 github-api/.mvn/
 github-api.iml
 github-api/target/
+github-api/src/main/resources/application-dev.properties
