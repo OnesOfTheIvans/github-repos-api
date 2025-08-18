@@ -1,6 +1,6 @@
 package list_repositories.entities;
 
-public class GithubUser {
+public class GithubUser implements Ownable {
     private String name;
     private String email;
     private String login;

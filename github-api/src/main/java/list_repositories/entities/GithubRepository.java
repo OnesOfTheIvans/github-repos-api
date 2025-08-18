@@ -79,7 +79,7 @@ public class GithubRepository {
     private LocalDateTime pushedAt;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
-    private GithubRepositoryPermissions permissions;
+    private GithubPermissions permissions;
     private String roleName;
     private String tempCloneToken;
     private Boolean deleteBranchOnMerge;
@@ -381,7 +381,7 @@ public class GithubRepository {
         return updatedAt;
     }
 
-    public GithubRepositoryPermissions getPermissions() {
+    public GithubPermissions getPermissions() {
         return permissions;
     }
 
@@ -721,7 +721,7 @@ public class GithubRepository {
         this.updatedAt = updatedAt;
     }
 
-    public void setPermissions(GithubRepositoryPermissions permissions) {
+    public void setPermissions(GithubPermissions permissions) {
         this.permissions = permissions;
     }
 

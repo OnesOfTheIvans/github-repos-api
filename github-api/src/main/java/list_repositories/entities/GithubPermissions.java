@@ -1,6 +1,6 @@
 package list_repositories.entities;
 
-public class GithubRepositoryPermissions {
+public class GithubPermissions {
     private Boolean admin;
     private Boolean maintain;
     private Boolean push;
