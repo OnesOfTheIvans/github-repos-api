@@ -4,8 +4,8 @@ import list_repositories.client.GithubApiClient;
 import list_repositories.entities.GithubRepository;
 import list_repositories.exceptions.GithubApiException;
 import list_repositories.exceptions.UserNotFoundException;
-import list_repositories.responses.RepositoryBranchResponse;
-import list_repositories.responses.UserRepositoryResponse;
+import list_repositories.responses.BranchDTO;
+import list_repositories.responses.RepositoryDTO;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 
@@ -20,7 +20,7 @@ public class GithubApiService {
         this.client = client;
     }
 
-    public List<UserRepositoryResponse> getUserRepositories(String username) {
+    public List<RepositoryDTO> getUserRepositories(String username) {
         try {
         List<GithubRepository> repos = client.getRepositories(username);
 
@@ -28,8 +28,8 @@ public class GithubApiService {
                 .filter(repo -> !repo.isFork())
                 .map(repo -> {
                     var githubBranches = client.getBranches(username, repo.getName());
-                    var branches = githubBranches.stream().map(branch -> new RepositoryBranchResponse(branch.getName(), branch.getCommit().getSha())).collect(Collectors.toSet());
-                    return new UserRepositoryResponse(
+                    var branches = githubBranches.stream().map(branch -> new BranchDTO(branch.getName(), branch.getCommit().getSha())).collect(Collectors.toSet());
+                    return new RepositoryDTO(
                             repo.getName(),
                             repo.getOwner().getLogin(),
                             branches
