@@ -125,7 +125,7 @@ public class GithubRepository {
         return description;
     }
 
-    public Boolean getFork() {
+    public Boolean isFork() {
         return fork;
     }
 
