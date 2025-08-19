@@ -23,7 +23,6 @@ public class GithubApiClient {
     }
 
     public List<GithubRepository> getRepositories(String username) {
-        //TODO try catch
         String userRepositoriesUrl = "/users/{username}/repos";
         return restClient.get()
                 .uri(userRepositoriesUrl, username)
@@ -33,7 +32,6 @@ public class GithubApiClient {
     }
 
     public List<GithubBranch> getBranches(String owner, String repo) {
-        //TODO try catch
         String repositoryBranchesUrl = "/repos/{owner}/{repo}/branches";
         return restClient.get()
                 .uri(repositoryBranchesUrl, owner, repo)
