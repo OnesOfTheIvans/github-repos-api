@@ -5,10 +5,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class GithubRepository {
+public class GithubRepository extends GithubEntityBase {
     private Integer id;
     private String nodeId;
-    private String name;
     private String fullName;
     private GithubUser owner;
     @JsonProperty("private")
@@ -16,7 +15,6 @@ public class GithubRepository {
     private String htmlUrl;
     private String description;
     private Boolean fork;
-    private String url;
     private String archiveUrl;
     private String assigneesUrl;
     private String blobsUrl;
@@ -101,10 +99,6 @@ public class GithubRepository {
         return nodeId;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public String getFullName() {
         return fullName;
     }
@@ -127,10 +121,6 @@ public class GithubRepository {
 
     public Boolean isFork() {
         return fork;
-    }
-
-    public String getUrl() {
-        return url;
     }
 
     public String getArchiveUrl() {
@@ -441,10 +431,6 @@ public class GithubRepository {
         this.nodeId = nodeId;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public void setFullName(String fullName) {
         this.fullName = fullName;
     }
@@ -467,10 +453,6 @@ public class GithubRepository {
 
     public void setFork(Boolean fork) {
         this.fork = fork;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
     }
 
     public void setArchiveUrl(String archiveUrl) {

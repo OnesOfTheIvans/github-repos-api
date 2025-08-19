@@ -3,7 +3,7 @@ package list_repositories.entities;
 public class GithubRequiredPullRequestReviews {
     private String url;
     private GithubDismissalRestrictions dismissalRestrictions;
-    private GithubBypassPullRequestAllowances bypassPullRequestAllowances;
+    private GithubUsersTeamsApps bypassPullRequestAllowances;
     private Boolean dismissStaleReviews;
     private Boolean requireCodeOwnerReviews;
     private Integer requiredApprovingReviewCount;
@@ -17,7 +17,7 @@ public class GithubRequiredPullRequestReviews {
         return dismissalRestrictions;
     }
 
-    public GithubBypassPullRequestAllowances getBypassPullRequestAllowances() {
+    public GithubUsersTeamsApps getBypassPullRequestAllowances() {
         return bypassPullRequestAllowances;
     }
 
@@ -45,7 +45,7 @@ public class GithubRequiredPullRequestReviews {
         this.dismissalRestrictions = dismissalRestrictions;
     }
 
-    public void setBypassPullRequestAllowances(GithubBypassPullRequestAllowances bypassPullRequestAllowances) {
+    public void setBypassPullRequestAllowances(GithubUsersTeamsApps bypassPullRequestAllowances) {
         this.bypassPullRequestAllowances = bypassPullRequestAllowances;
     }
 

@@ -3,7 +3,6 @@ package list_repositories.controller;
 import list_repositories.exceptions.GithubApiException;
 import list_repositories.exceptions.UserNotFoundException;
 import list_repositories.responses.ErrorResponse;
-import list_repositories.responses.RepositoryDTO;
 import list_repositories.responses.Response;
 import list_repositories.responses.UserResponse;
 import list_repositories.service.GithubApiService;
@@ -11,8 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/github")

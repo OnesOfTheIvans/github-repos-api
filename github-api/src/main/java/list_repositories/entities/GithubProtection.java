@@ -1,10 +1,9 @@
 package list_repositories.entities;
 
-public class GithubProtection {
-    private String url;
+public class GithubProtection extends GithubEntityBase {
     private Boolean enabled;
     private GithubRequiredStatusChecks requiredStatusChecks;
-    private GithubEnforceAdmins enforceAdmins;
+    private GithubEnabled enforceAdmins;
     private GithubRequiredPullRequestReviews requiredPullRequestReviews;
     private GithubRestrictions restrictions;
     private GithubEnabled requiredLinearHistory;
@@ -12,15 +11,10 @@ public class GithubProtection {
     private GithubEnabled allowDeletions;
     private GithubEnabled blockCreations;
     private GithubEnabled requiredConversationResolution;
-    private String name;
     private String protectionUrl;
-    private GithubSignatures requiredSignatures;
+    private GithubEnabled requiredSignatures;
     private GithubEnabled lockBranch = new GithubEnabled(false);
     private GithubEnabled allowForkSyncing = new GithubEnabled(false);
-
-    public String getUrl() {
-        return url;
-    }
 
     public Boolean getEnabled() {
         return enabled;
@@ -30,7 +24,7 @@ public class GithubProtection {
         return requiredStatusChecks;
     }
 
-    public GithubEnforceAdmins getEnforceAdmins() {
+    public GithubEnabled getEnforceAdmins() {
         return enforceAdmins;
     }
 
@@ -62,15 +56,11 @@ public class GithubProtection {
         return requiredConversationResolution;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public String getProtectionUrl() {
         return protectionUrl;
     }
 
-    public GithubSignatures getRequiredSignatures() {
+    public GithubEnabled getRequiredSignatures() {
         return requiredSignatures;
     }
 
@@ -82,10 +72,6 @@ public class GithubProtection {
         return allowForkSyncing;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
     public void setEnabled(Boolean enabled) {
         this.enabled = enabled;
     }
@@ -94,7 +80,7 @@ public class GithubProtection {
         this.requiredStatusChecks = requiredStatusChecks;
     }
 
-    public void setEnforceAdmins(GithubEnforceAdmins enforceAdmins) {
+    public void setEnforceAdmins(GithubEnabled enforceAdmins) {
         this.enforceAdmins = enforceAdmins;
     }
 
@@ -126,15 +112,11 @@ public class GithubProtection {
         this.requiredConversationResolution = requiredConversationResolution;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public void setProtectionUrl(String protectionUrl) {
         this.protectionUrl = protectionUrl;
     }
 
-    public void setRequiredSignatures(GithubSignatures requiredSignatures) {
+    public void setRequiredSignatures(GithubEnabled requiredSignatures) {
         this.requiredSignatures = requiredSignatures;
     }
 

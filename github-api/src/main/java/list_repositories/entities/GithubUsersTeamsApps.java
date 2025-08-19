@@ -2,7 +2,7 @@ package list_repositories.entities;
 
 import java.util.List;
 
-public class GithubBypassPullRequestAllowances {
+public class GithubUsersTeamsApps {
     private List<GithubUser> users;
     private List<GithubTeam> teams;
     private List<GithubApp> apps;
